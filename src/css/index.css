@@ -1,0 +1,60 @@
+.main-conter{
+    width:50%;
+}
+.add-list-area ul {
+    clear: both;
+    height: 40px;
+    padding:0;
+    background: #45940e;
+    color: #fff;
+    border:1px solid #45940e;
+}
+.add-list-area li {
+    float: left;
+    list-style: none;
+    height: 100%;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+.add-list-area li span{
+    display: block;
+    padding-top: 8px;
+}
+.add-list-area li.isActived{
+    background: #fff;
+    color: #45940e;
+}
+.list-area ul{
+    margin:0;
+    padding: 0;
+}
+.list-area ul li {
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+}
+.list-area ul li .oper-area {
+    float: right;
+    display: none;
+}
+.list-area ul li .oper-area.showOper{
+    display: inline-block;
+}
+.list-area ul li .oper-area span{
+    cursor: pointer;
+    margin-right: 20px;
+}
+.list-area ul li .oper-area span:hover{
+    color: #64d415;
+}
+.list-area ul li .isHide{
+    display: none;
+}
+.list-area ul li .target-input{
+    display: none;
+}
+.list-area ul li .target-input.isShow{
+    display: inline-block;
+}

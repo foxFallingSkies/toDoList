@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./src/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/index.css">
+</head>
+
+<body>
+    <!-- 头部 BEGIN -->
+    <div class="header-container">
+        <p>我是头部区域</p>
+    </div>
+    <!-- 头部 END -->
+    <!-- main BEGIN -->
+    <div class="main-conter">
+        <!-- todoList BEGIN -->
+        <div class="list-container">
+            <div class="list-title">
+                <span>小目标列表</span>
+            </div>
+            <!-- 添加目标 BEGIN -->
+            <div class="add-list">
+                <label>添加小目标：</label>
+                <input type="" name="" placeholder="添加小目标" v-model="addText" @keyup.enter="addListFun">
+            </div>
+            <!-- 添加目标 END -->
+            <div class="add-list-area">
+                <ul>
+                    <li v-for="item in listNav" @click="listClickFun" :class="{isActived:item.isActived}">
+                        <span :data-value="item.value">{{item.text}}</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 目标列表区域 BEGIN -->
+            <div class="list-area">
+                <ul>
+                    <li v-for="(item,index) in addList" @mouseenter="mouseEnterFun" @mouseleave="mouseLeaveFun">
+                        <span :class="{isHide:item.isHide}">{{item.value}}</span>
+                        <input class="target-input" type="" name="" v-model="targetValue" :class="{isShow:item.isShow}" @keyup.enter="editComFun">
+                        <!-- 操作区域 BEGIN -->
+                        <div class="oper-area" :class="{showOper:item.isShowOper}" >
+                            <span class="icon iconfont icon-edit" :class="{isHide:item.isOperHide}" @click = "editFun" title="编辑"></span>
+                            <span class="icon iconfont icon-wancheng" :class="{isHide:item.isOperHide}" @click = "completeFun" title="完成"></span>
+                            <span class="icon iconfont icon-shanchu" @click = "deleteFun" title="删除"></span>
+                        </div>
+                        <!-- 操作区域 END -->
+                    </li>
+                </ul>
+            </div>
+            <!-- 目标列表区域 END -->
+        </div>
+        <!-- todoList END -->
+    </div>
+    <!-- todoList END -->
+    <!-- 底部区域 BEGIN -->
+    <div class="footer-container">
+        <p>我是底部区域</p>
+    </div>
+    <!-- 底部区域 END -->
+     <script type="text/javascript" src="src/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="src/vue.js"></script>
+    <script type="text/javascript" src="src/main.js"></script>
+</body>
+
+</html>
