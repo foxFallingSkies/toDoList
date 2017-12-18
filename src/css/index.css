@@ -1,14 +1,33 @@
-.main-conter{
-    width:50%;
+body {
+    margin: 0;
+    padding: 0;
 }
+
+.header-container {
+    width: 100%;
+    height: 50px;
+    background: #45940f;
+    color: #fff;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.main-conter {
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
 .add-list-area ul {
     clear: both;
     height: 40px;
-    padding:0;
+    padding: 0;
     background: #45940e;
     color: #fff;
-    border:1px solid #45940e;
+    border: 1px solid #45940e;
 }
+
 .add-list-area li {
     float: left;
     list-style: none;
@@ -17,44 +36,84 @@
     text-align: center;
     cursor: pointer;
 }
-.add-list-area li span{
+
+.add-list-area li span {
     display: block;
     padding-top: 8px;
 }
-.add-list-area li.isActived{
+
+.add-list-area li.isActived {
     background: #fff;
     color: #45940e;
 }
-.list-area ul{
-    margin:0;
+
+.list-area {
+    max-height: 400px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.list-area ul {
+    margin: 0;
     padding: 0;
 }
+
 .list-area ul li {
     height: 40px;
     line-height: 40px;
     list-style: none;
     cursor: pointer;
+    border-bottom: 1px solid #85bb60;
 }
+
+.list-area ul li:hover {
+    background: #45940f;
+    color: #fff;
+}
+
+.list-area ul li .text-value {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .list-area ul li .oper-area {
     float: right;
     display: none;
 }
-.list-area ul li .oper-area.showOper{
+
+.list-area ul li .oper-area.showOper {
     display: inline-block;
 }
-.list-area ul li .oper-area span{
+
+.list-area ul li .oper-area span {
     cursor: pointer;
     margin-right: 20px;
 }
-.list-area ul li .oper-area span:hover{
+
+.list-area ul li .oper-area span:hover {
     color: #64d415;
 }
-.list-area ul li .isHide{
+
+.list-area ul li .isHide {
     display: none;
 }
-.list-area ul li .target-input{
+
+.list-area ul li .target-input {
     display: none;
 }
-.list-area ul li .target-input.isShow{
+
+.list-area ul li .target-input.isShow {
     display: inline-block;
+}
+
+.footer-container {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
 }

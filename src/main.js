@@ -34,6 +34,12 @@ var app = new Vue({
          */
         addListFun: function(e) {
             var addText = this.addText;
+            for(var i=0; i < this.totalList.length;i++){
+                if(addText === this.totalList[i].value){
+                    alert('目标已有，请不要重复添加哦');
+                    return;
+                }
+            }
             if (this.first) {
                 this.addList.push({
                     value: addText,
@@ -59,6 +65,7 @@ var app = new Vue({
                 isOperHide: false,
                 isShowOper:false
             });
+            this.addText = '';
         },
         /**
          * [listClickFun 导航模块点击事件,切换数据源]
